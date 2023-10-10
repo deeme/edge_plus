@@ -481,7 +481,8 @@ LRESULT CALLBACK MouseProc(int nCode, WPARAM wParam, LPARAM lParam)
         //    }
         //}
 
-        if (wParam == WM_LBUTTONDBLCLK)
+        //if (wParam == WM_LBUTTONDBLCLK)  // 双击关闭
+        if (wParam == WM_RBUTTONDOWN) // 右键关闭
         {
             HWND hwnd = WindowFromPoint(pmouse->pt);
             NodePtr TopContainerView = GetTopContainerView(hwnd);
